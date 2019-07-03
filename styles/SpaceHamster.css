@@ -1,0 +1,128 @@
+.spaceHamsterWindowContainer{
+    position: absolute;
+    z-index: 5;
+    left:50%;
+    top:45%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    flex-direction: column;
+    cursor:default;
+    border : 4px lightblue solid ;
+    border-radius: 5px;
+    background-color: rgba(10,10,46,1);
+
+
+}
+.spaceHamsterWindowContent{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    
+  
+    
+    
+    }
+
+    .enterYourNameContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+.hamsterGameInfo{
+    position: absolute;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left:25%;
+    top:17%;
+    
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Courier';
+    -webkit-animation: slide-in-elliptic-bottom-fwd 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+    animation: slide-in-elliptic-bottom-fwd 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+}
+.onlinePlayerCount{
+    position: absolute;
+    white-space: nowrap;
+
+   
+    right:40px;
+    top:15%;
+    font-size:15px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Courier';
+}
+
+
+ @-webkit-keyframes slide-in-elliptic-bottom-fwd {
+    0% {
+      -webkit-transform: translateY(600px) rotateX(30deg) scale(0);
+              transform: translateY(600px) rotateX(30deg) scale(0);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) rotateX(0) scale(1);
+              transform: translateY(0) rotateX(0) scale(1);
+      -webkit-transform-origin: 50% -1400px;
+              transform-origin: 50% -1400px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-elliptic-bottom-fwd {
+    0% {
+      -webkit-transform: translateY(600px) rotateX(30deg) scale(0);
+              transform: translateY(600px) rotateX(30deg) scale(0);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) rotateX(0) scale(1);
+              transform: translateY(0) rotateX(0) scale(1);
+      -webkit-transform-origin: 50% -1400px;
+              transform-origin: 50% -1400px;
+      opacity: 1;
+    }
+  }
+  
+  
+    .joinText{
+        margin-top: 10px;
+       font-size: 35px;
+       color:white;
+       font-family: 'Courier';
+       cursor: pointer;
+              
+        }
+        .joinText:hover{
+            color: rgb(253,240,4)
+        }
+
+        @media (max-width:320px)  {
+                .spaceHamsterWindowContainer{
+                        position: absolute;
+                        z-index: 5;
+                        left:50%;
+                        top:45%;
+                        transform: translate(-50%, -50%);
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        cursor:default;
+                        border : 4px lightblue solid ;
+                        border-radius: 5px;
+                        background-color: rgba(10,10,46,1);
+                      
+                        
+                        
+                        }
+             
+                }

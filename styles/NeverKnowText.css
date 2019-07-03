@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Courier';
+    src: url('../static/cour.ttf'); 
+  }
+.neverKnowText{
+    font-family: 'Courier';
+    font-size: 20px;
+    position: absolute;
+    color:white;
+    left: 50%;
+    bottom:10%;
+    z-index:9999999;
+
+    -webkit-animation: fade-out 2s ease-out both;
+    animation: fade-out 2s ease-out both;
+    -webkit-animation-delay: 1.5s; /* Safari 4.0 - 8.0 */
+    animation-delay: 1.5s;
+}
+
+@-webkit-keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+
+    }
+  }
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  

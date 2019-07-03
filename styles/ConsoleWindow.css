@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'Courier';
+    src: url('../static/cour.ttf'); 
+  }
+  @font-face {
+    font-family: 'lastpeony';
+    src: url('../static/lastpeony.ttf'); 
+  }
+@import '~flag-icon-css/css/flag-icon.css';
+
+.consoleWindow{
+    z-index: 999;
+   
+    
+    height:300px;
+    width:450px;
+    background: #000;
+    box-shadow: 0 0 20px -3px #000;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+}
+@media (max-width:415px)  {
+    .consoleWindow{
+        height:500px;
+        width:95%;
+    
+    }
+    
+    
+    
+     }
+
+
+.accessDesktopButton{
+margin-top:20px;
+  border: 6px solid rgb(253,240,4); /* Green */
+        border-radius: 3px;
+cursor: pointer;
+        width: 200px;
+        height:125px;
+        
+        display: inline-block;
+      
+}
+.accessDesktopButton:hover{
+    background-color: rgb(253,240,4)
+}
+.accessDesktopButtonText{
+    color: white;
+    font-family: "lastpeony";
+    font-size:25px;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+ 
+    transform: translate(-50%, -50%);
+
+}
+
+.consoleWindowLeaveAnimation{
+    z-index: 999;
+   
+    
+    height:300px;
+    width:450px;
+    background: #000;
+    box-shadow: 0 0 20px -3px #000;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+
+    -webkit-animation: puff-out-center 2.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+	        animation: puff-out-center 2.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+}
+
+ @-webkit-keyframes puff-out-center {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+      -webkit-filter: blur(2px);
+              filter: blur(2px);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  @keyframes puff-out-center {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+      -webkit-filter: blur(2px);
+              filter: blur(2px);
+      opacity: 0;
+      visibility: hidden;
+
+    }
+  }
+  
+.onlineCircle{
+    margin-left: 5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border:2px solid green;
+    display: inline-block;
+    background-color: rgb(68, 245, 91)
+}
+
+.offlineCircle{
+    margin-left: 5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border:2px solid red;
+    display: inline-block;
+    background-color: rgb(245, 68, 68)
+}
+.rotatingStick{
+    font-size: 15px;
+    color:white;
+    -webkit-animation: rotation 0.5s infinite linear;
+}
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+.consoleWindowHeader{
+    background: #0f0;
+
+    text-align: right;
+    border-bottom: 2px solid #000;
+    padding: 2px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+.consoleWindowHeader > strong {
+    color: black;
+    
+    float: left;
+    font-size: 15px;
+}
+
+.consoleWindowContent{
+    font-family: "Courier";
+    color:white;
+    
+}
+.connectingDot{
+    margin-left: 5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border:2px solid green;
+    display: inline-block;
+    animation: blinkConnectingDot 1s linear infinite;
+
+}
+
+.connectedDot{
+    margin-left: 5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border:2px solid green;
+    background-color:#0f0;
+    display: inline-block;
+}
+@keyframes blinkConnectingDot {
+  0%, 49% {
+    background-color: black;
+
+}
+50%, 100% {
+  background-color: orangered;
+} }
+
+.consoleWindowHeader > span{
+    cursor: pointer;
+    font-size: 19px;
+    padding-bottom: 3px;
+    padding-right: 3px;
+    border-radius: 5px;
+    line-height: 20px;
+    width: 12px;
+    height: 20px;
+    overflow: hidden;
+    color:black;
+margin-left: auto;
+font-weight: bold;
+font-size:20px;
+}
+
+

@@ -1,0 +1,235 @@
+.desktopContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: url(https://i.ibb.co/qJxbD8x/Cached-Image-1366-768-POS4.jpg);
+    background-size: cover;
+
+
+}
+.desktopIcons{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    position: absolute;
+    top: 38px;
+    left: 50px;
+    cursor: pointer;
+    
+}
+.hamsterIconContainer{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    align-items: center;
+}
+.openWindows{
+    display:flex;
+    margin-left:50px;
+    cursor: pointer;
+}
+
+.startButton{
+display: flex;
+color:yellow;
+font-family: 'lastpeony';
+letter-spacing: 3px;
+font-size: 20px;
+font-weight: bold;
+margin-left: 10px;
+cursor: pointer;
+  
+}
+
+.desktopBlack{
+    top: 0;
+    z-index: 999999;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display:block;
+    position:fixed;
+    animation: back-change 3s linear;
+    animation-fill-mode: forwards;
+}
+
+.desktopReturn{
+    top: 0;
+    z-index: 999999;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display:block;
+    position:fixed;
+    animation: return-initial 3s linear;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes back-change {
+    from { background: transparent }
+      to { background: black }
+ }
+ @keyframes return-initial {
+    from { background: black }
+      to { background: transparent }
+ }
+
+.activateWindowsTextContainer{
+display: flex;
+flex-direction: column;
+position: absolute;
+bottom:20%;
+right:20px;
+font-family: 'Courier';
+color:whitesmoke;
+opacity: 0.5;
+-webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
+
+
+}
+.startButton:hover{
+    color: yellow;
+    text-shadow:0px 0px 30px #fdec6e;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+
+
+.startBar{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+background: rgb(12,3,18);
+background: linear-gradient(90deg, rgba(12,3,18,1) 25%, rgba(10,10,46,1) 75%, rgba(56,9,78,1) 100%);
+    padding: 8px 0 0 8px;
+    box-shadow: inset 0 4px 0 #ADD8E6
+    ;
+    z-index: 3;
+}
+.clock{
+    
+    font-family: Courier;
+    color:#ADD8E6    ;
+    font-size: 18px;
+    display:flex;
+    margin-left: auto;
+    font-weight: 700;
+   
+    padding: 15px 20px 11px;
+}
+.backGroundRunningApps{
+    position: fixed;
+    bottom:20px;
+    right:20px;
+    
+    display: flex;
+
+    width: 150px;
+    height: 150px;
+    background-color: rgb(0, 0, 139,0.4);
+
+}
+.shutDownMenu{
+    position: fixed;
+    bottom:50px;
+    left:100px;
+
+    font-family: "lastpeony";
+    color:yellow;
+    font-size: 20px;
+cursor: pointer;
+}
+.shutDownMenu:hover{
+    position: fixed;
+    bottom:50px;
+    left:100px;
+
+    font-family: "lastpeony";
+    color:black;
+    font-size: 20px;
+    cursor:pointer;
+}
+
+.shutDownText:hover{
+    color:black;
+}
+.windowSelected{
+min-height: 40px;
+width: 100px;
+border: 2px solid yellow;
+display: flex;
+align-items: center;
+font-family: 'Courier';
+color:whitesmoke;
+font-size: 17px;
+margin-left:15px;
+
+
+
+}
+
+.windowHighZIndex{
+    z-index: 999;
+}
+.windowNotSelected{
+    min-height: 40px;
+    width: 100px;
+
+border: 2px solid lightblue;
+display: flex;
+align-items: center;
+font-family: 'Courier';
+color:whitesmoke;
+font-size: 17px;
+margin-left:15px;
+
+}
+.upArrow{
+
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.desktopIcons .iconTextContainer{
+    display:flex;
+    flex-direction: column;
+    max-width: 75px;
+    margin-bottom: 50px;
+    align-items: center;
+ 
+    
+
+}
+
+.desktopIcons .iconTextContainer span{
+    margin-top:5px;
+    font-size:18px;
+    color:white;
+    font-family: "Courier"
+  
+    
+
+}
