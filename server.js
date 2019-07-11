@@ -1,7 +1,7 @@
 const express = require('express')
 const next = require('next')
 
-const port = parseInt(process.env.PORT, 10) || 3000
+const port = parseInt(process.env.PORT, 10) || 80
 const dev = process.env.NODE_ENV == 'production'
 
 var p2 = require('p2'); 
