@@ -86,7 +86,7 @@ updateHistory = (message,userName,isBot=false)=>{
 renderIsTypingMessage =()=>{
   if(this.state.showTypingMessage){
     return(
-      <div style={{marginTop: "auto"}}>
+      <div style={{position:"absolute",left:0,bottom:0}}>
         <span style={{color:"yellow",fontSize:"15px",fontFamily:"Courier"}}>LastPeony Bot is typing...</span>
       </div>
       
@@ -257,7 +257,7 @@ for (var i=0; i<this.questionAnswers[questionIndexToReply].answers.length; i++) 
     var answer = this.questionAnswers[questionIndexToReply].answers[i];
     this.updateHistory(answer,"Last Peony",true)
     this.setState({showTypingMessage:true})
-var delay =  Math.floor(Math.random()*(6000-3000+1)+3000);
+var delay =  Math.floor(Math.random()*(8000-6500+1)+6500);
 
     await this.answerDelay(delay)
   

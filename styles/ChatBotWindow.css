@@ -67,7 +67,8 @@ margin-right: 5px;
 }
 
 .chatBotWindowContent{
-display: flex;
+position: relative;
+    display: flex;
 flex-direction: column;
 height: 375px;
 background-color: rgba(10,10,46,1);
