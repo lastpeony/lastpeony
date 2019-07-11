@@ -107,7 +107,8 @@ border : 1px lightblue solid ;
 border-left: 0px;
 border-top:0px;
 border-bottom:2px lightblue solid;
-height: 30px;
+min-width: 411px;
+min-height: 35px;
 
 
 
