@@ -86,7 +86,7 @@ updateHistory = (message,userName,isBot=false)=>{
 renderIsTypingMessage =()=>{
   if(this.state.showTypingMessage){
     return(
-      <div style={{position:"absolute",left:0,bottom:0}}>
+      <div style={{position:"fixed",left:0,bottom:0}}>
         <span style={{color:"yellow",fontSize:"15px",fontFamily:"Courier"}}>LastPeony Bot is typing...</span>
       </div>
       
