@@ -106,8 +106,8 @@ renderChatHistory = ()=>{
       if(message.isBot){
         return(
 
-          <div key={message.message+Math.random()} style={{display:"flex",fontFamily:"Courier",marginTop:"10px",marginBottom:"10px",minHeight:"30px"}}>
-          <span>
+          <div key={message.message+Math.random()} style={{display:"flex",fontFamily:"Courier",marginTop:"10px",marginBottom:"10px"}}>
+          <span style={{flex:1}}>
           <span style={{color:"yellow",fontSize:"18px"}}>{userName}</span>
           <span style={{color:"lightblue",fontSize:"17px",marginLeft:"20px"}}>{message.message}</span>
     
@@ -118,8 +118,8 @@ renderChatHistory = ()=>{
         )
       }else{
         return(
-          <div key={message.message+Math.random()}  style={{display:"flex",fontFamily:"Courier",marginTop:"10px",marginBottom:"10px",minHeight:"30px"}}>
-          <span>
+          <div key={message.message+Math.random()}  style={{display:"flex",fontFamily:"Courier",marginTop:"10px",marginBottom:"10px"}}>
+          <span style={{flex:1}}>
           <span style={{color:"white",fontSize:"18px"}}>{userName}</span>
           <span style={{color:"lightblue",fontSize:"17px",marginLeft:"20px"}}>{message.message}</span>
     
