@@ -40,6 +40,8 @@
     background: linear-gradient(90deg,#2536f8 0,#81184b);
     color:white;
     border-bottom: 3px lightblue solid;
+    min-width: 360;
+    min-height: 46;
     }
 
 
