@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import dynamic from 'next/dynamic'
+
 import Virus from '../components/Virus'
 const RealName = dynamic(import('../components/RealName'), {ssr: false})
 const ConsoleWindow = dynamic(import('../components/ConsoleWindow'), {ssr: false})
