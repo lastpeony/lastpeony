@@ -3,6 +3,7 @@ import '../styles/WorkWindow.css'; // import css
 import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same time
 import ImageGallery from 'react-image-gallery';
 import '../styles/image-gallery.css'
+import {isMobile} from 'react-device-detect';
 
 
 export default class WorkWindow extends Component{
@@ -594,36 +595,68 @@ closeGalleryClicked = ()=>{
   }
 }
   render(){
-
-        return(
+    if(isMobile){
+      return(
           
-            <div className={this.props.workWindowMinimizedClassSelector()}>
-            {this.renderGallery()}
-            <Draggable>
+        <div className={this.props.workWindowMinimizedClassSelector()}>
+        {this.renderGallery()}
 
-              <div  onClick={()=> this.closeGalleryClicked()} className={this.workWindowContainerCssSelector()}>
-         <div className="workWindowToolBar">
-         <div style={{display:"flex",alignItems:"center",paddingBottom:"5px",paddingTop:"5px"}}>
-         <img width="35px" src="../static/work.png"></img>
-         <span style={{fontFamily:"Courier",fontSize:"20px",marginLeft:"5px"}}>Projects</span>
-  
-         </div>
-        <div className="closeMinimize">
-  <span onClick={()=> this.props.minimizeWorkWindow()} className="minimize">-</span>
-  <span onClick={()=> this.props.closeWorkWindow()} className="closeWindow">×</span>
-        </div>
-         </div>
-       {this.renderWorkWindowAdressBar()}
-         <div className="workWindowContent">
-       {this.renderWorkWindowContent()}
-  
-         </div>
+          <div  onClick={()=> this.closeGalleryClicked()} className={this.workWindowContainerCssSelector()}>
+     <div className="workWindowToolBar">
+     <div style={{display:"flex",alignItems:"center",paddingBottom:"5px",paddingTop:"5px"}}>
+     <img width="35px" src="../static/work.png"></img>
+     <span style={{fontFamily:"Courier",fontSize:"20px",marginLeft:"5px"}}>Projects</span>
+
+     </div>
+    <div className="closeMinimize">
+<span onClick={()=> this.props.minimizeWorkWindow()} className="minimize">-</span>
+<span onClick={()=> this.props.closeWorkWindow()} className="closeWindow">×</span>
+    </div>
+     </div>
+   {this.renderWorkWindowAdressBar()}
+     <div className="workWindowContent">
+   {this.renderWorkWindowContent()}
+
+     </div>
+
     
-        
-              </div>
-            </Draggable>
-            </div>
-            )
+          </div>
+        </div>
+        )
+    }else{
+      return(
+          
+        <div className={this.props.workWindowMinimizedClassSelector()}>
+        {this.renderGallery()}
+        <Draggable>
+
+          <div  onClick={()=> this.closeGalleryClicked()} className={this.workWindowContainerCssSelector()}>
+     <div className="workWindowToolBar">
+     <div style={{display:"flex",alignItems:"center",paddingBottom:"5px",paddingTop:"5px"}}>
+     <img width="35px" src="../static/work.png"></img>
+     <span style={{fontFamily:"Courier",fontSize:"20px",marginLeft:"5px"}}>Projects</span>
+
+     </div>
+    <div className="closeMinimize">
+<span onClick={()=> this.props.minimizeWorkWindow()} className="minimize">-</span>
+<span onClick={()=> this.props.closeWorkWindow()} className="closeWindow">×</span>
+    </div>
+     </div>
+   {this.renderWorkWindowAdressBar()}
+     <div className="workWindowContent">
+   {this.renderWorkWindowContent()}
+
+     </div>
+
+    
+          </div>
+        </Draggable>
+        </div>
+        )
+
+    }
+
+      
     
 
     
