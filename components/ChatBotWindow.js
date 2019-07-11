@@ -87,7 +87,7 @@ updateHistory = (message,userName,isBot=false)=>{
 renderIsTypingMessage =()=>{
   if(this.state.showTypingMessage){
     return(
-      <div style={{position:"fixed",left:0,bottom:0}}>
+      <div style={{marginTop:"auto"}}>
         <span style={{color:"yellow",fontSize:"15px",fontFamily:"Courier"}}>LastPeony Bot is typing...</span>
       </div>
       
@@ -106,7 +106,7 @@ renderChatHistory = ()=>{
       if(message.isBot){
         return(
 
-          <div key={message.message+Math.random()} style={{display:"flex",fontFamily:"Courier",paddingTop:"10px",paddingBottom:"10px"}}>
+          <div key={message.message+Math.random()} style={{display:"flex",fontFamily:"Courier",marginTop:"10px",marginBottom:"10px",minHeight:"120px"}}>
           <span>
           <span style={{color:"yellow",fontSize:"18px"}}>{userName}</span>
           <span style={{color:"lightblue",fontSize:"17px",marginLeft:"20px"}}>{message.message}</span>
@@ -118,7 +118,7 @@ renderChatHistory = ()=>{
         )
       }else{
         return(
-          <div key={message.message+Math.random()}  style={{display:"flex",fontFamily:"Courier",paddingTop:"10px",paddingBottom:"10px"}}>
+          <div key={message.message+Math.random()}  style={{display:"flex",fontFamily:"Courier",marginTop:"10px",marginBottom:"10px",minHeight:"120px"}}>
           <span>
           <span style={{color:"white",fontSize:"18px"}}>{userName}</span>
           <span style={{color:"lightblue",fontSize:"17px",marginLeft:"20px"}}>{message.message}</span>
