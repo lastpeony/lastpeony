@@ -20,12 +20,14 @@ export default class Index extends Component{
     this.state = { 
     renderVirus :false,
     renderNeverKnowText:false,
-    renderStrikedName:false
+    renderStrikedName:false,
+    show:false,
     };
   }  
 
   componentDidMount(){
 
+    this.setState({show:true})
  
 
 
@@ -70,23 +72,26 @@ return(
     this.setState({renderStrikedName:true})
   }
 render(){
-  return(
+  if(this.state.show == true){
+    return(
 
-    <div style={{backgroundColor:"#010203",height:"100%"}}>
-    {this.renderRealName()}
-    <ConsoleWindow makeStrikedName = {this.makeStrikedName} closeClicked={this.closeClicked} renderVirus={this.renderVirus} />
-    {this.renderVirusOrNot()}
-    {this.renderNeverKnowTextOrNot()}
-    <Link route='desktop' >
-    <div style={{position:"absolute",bottom:0,left:0}}>
-      <span className="skipButton">Skip</span>
+      <div style={{backgroundColor:"#010203",height:"100%"}}>
+      {this.renderRealName()}
+      <ConsoleWindow makeStrikedName = {this.makeStrikedName} closeClicked={this.closeClicked} renderVirus={this.renderVirus} />
+      {this.renderVirusOrNot()}
+      {this.renderNeverKnowTextOrNot()}
+      <Link route='desktop' >
+      <div style={{position:"absolute",bottom:0,left:0}}>
+        <span className="skipButton">Skip</span>
+      </div>
+      </Link>
+  
     </div>
-    </Link>
-
-  </div>
-
-
-  )
+  
+  
+    )
+  }
+  
  
 
 

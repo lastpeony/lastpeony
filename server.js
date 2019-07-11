@@ -5,7 +5,6 @@ const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV == 'production'
 
 var p2 = require('p2'); 
-var Vec2 = require('vec2')
 
 const server = express()
 var socketServer = require('http').Server(server);
