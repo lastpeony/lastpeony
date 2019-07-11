@@ -30,17 +30,13 @@ export default class HamsterSpaceGame extends Component{
     this.game= new Phaser.Game(700, 450, Phaser.AUTO, 'phaser', { preload: this.preload, create: this.create, update: this.update, render: this.renderGame });
 
 
-    console.log("i got called!")
   }
 
   onSocketConnected =()=>{
 
-    console.log("socket connected!")
     this.ship = this.game.add.sprite(200, 200, 'ship');
-    console.log(this.socket.id)
     this.ship.socketId = this.socket.id;
     
-    console.log(this.ship.socketId)
     this.ship.scale.set(2);
     this.ship.smoothed = false;
     this.ship.animations.add('fly', [0,1,2,3,4,5], 10, true);
@@ -48,7 +44,7 @@ export default class HamsterSpaceGame extends Component{
 
 
     //  Create our physics body - a 28px radius circle. Set the 'false' parameter below to 'true' to enable debugging
-	this.game.physics.p2.enable(this.ship, true);
+	this.game.physics.p2.enable(this.ship, false);
     this.ship.body.setCircle(28);
     this.playerList.push(this.ship)
     this.setState({onlinePlayerCount:this.playerList.length})
@@ -63,7 +59,6 @@ export default class HamsterSpaceGame extends Component{
 
     this.ship.addChild(userNameText)
     this.socket.emit("newPlayer",playerData);
-    console.log(this.ship.body.data)
 	this.game.camera.follow(this.ship,Phaser.Camera.FOLLOW_LOCKON);
     this.setState({showGameInfo:true})
   }
@@ -76,7 +71,7 @@ export default class HamsterSpaceGame extends Component{
     ship.smoothed = false;
     ship.animations.add('fly', [0,1,2,3,4,5], 10, true);
     ship.play('fly');
-    this.game.physics.p2.enable(ship, true);
+    this.game.physics.p2.enable(ship, false);
     ship.body.setCircle(28);
     var userNameText = this.game.add.bitmapText(0,-24, 'hamsterfont',ship.userName,6);
     userNameText.anchor.set(0.5);
@@ -85,11 +80,9 @@ export default class HamsterSpaceGame extends Component{
     this.setState({onlinePlayerCount:this.playerList.length})
   }
   componentWillReceiveProps(props){
-    console.log(props)
     if(props.disconnect == true){
         this.socket.disconnect()
         this.props.closeWindow()
-        console.log("disconnectedddd")
     }
   }
   onRemovePlayer = (data)=>{
@@ -99,7 +92,6 @@ export default class HamsterSpaceGame extends Component{
     if(player.socketId == data.id){
         player.destroy()
         this.playerList.splice(index, 1);
-        console.log("player removed")
         this.setState({onlinePlayerCount:this.playerList.length})
 
 
@@ -121,7 +113,7 @@ export default class HamsterSpaceGame extends Component{
     ship.smoothed = false;
     ship.animations.add('fly', [0,1,2,3,4,5], 10, true);
     ship.play('fly');
-    this.game.physics.p2.enable(ship, true);
+    this.game.physics.p2.enable(ship, false);
     ship.body.setCircle(28);
     var userNameText = this.game.add.bitmapText(0,-24, 'hamsterfont',ship.userName,6);
     userNameText.anchor.set(0.5);
@@ -211,7 +203,7 @@ for(var i=0;i<meteorData.length;i++){
     var meteor = this.game.add.sprite(meteorData[i].position[0]*-20,meteorData[i].position[1]*-20,'meteor')
     
    
-    this.game.physics.p2.enable(meteor, true);
+    this.game.physics.p2.enable(meteor, false);
     meteor.scale.set(2)
 
     meteor.body.setCircle(32);
@@ -220,7 +212,6 @@ for(var i=0;i<meteorData.length;i++){
     this.meteorList.push(meteor);
 
 }
-console.log("ben geldim!!")
 
 
 }

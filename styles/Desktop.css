@@ -59,12 +59,56 @@ cursor: pointer;
     left: 0;
     right: 0;
     bottom: 0;
-    display:block;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     position:fixed;
     animation: back-change 3s linear;
     animation-fill-mode: forwards;
 }
+.peonyImage{
 
+    width: 314px;
+    height: auto;
+    align-self: center;
+
+    -webkit-animation: fade-in 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3.5s both;
+            animation: fade-in 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3.5s both;
+          
+}
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 .desktopReturn{
     top: 0;
     z-index: 999999;
@@ -177,7 +221,7 @@ cursor: pointer;
 }
 .windowSelected{
 min-height: 40px;
-width: 100px;
+width: 125px;
 border: 2px solid yellow;
 display: flex;
 align-items: center;

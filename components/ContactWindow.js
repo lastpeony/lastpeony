@@ -49,8 +49,14 @@ export default class ContactWindow extends Component{
          <br/>
          <span>I'd love to talk about your new project/work ideas or we can just dream about a cyberpunk future together.</span>
          <br/>
+         <div style={{float:"right",display:"flex",flexDirection:"column",alignContent:"center"}}>
+         <span>Yunus Emre Güney</span>
+         <span>Software Engineer</span>
+         </div>
+        
+         
          <br/>
-         <span>##########################</span>
+         <span>#################################</span>
          <br/>
          <br/>
          <a style={{color:"#0f0"}} target="_blank" href="mailto:yguney@sabanciuniv.edu">yguney@sabanciuniv.edu</a>

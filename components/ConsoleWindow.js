@@ -5,6 +5,7 @@ import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same ti
 import NickName from  './NickName'
 import {Link} from '../routes'
 import {Router} from '../routes'
+import HashLoader from 'react-spinners/HashLoader';
 
 export default class ConsoleWindow extends Component{
 
@@ -23,27 +24,43 @@ export default class ConsoleWindow extends Component{
     firstPartCompleted:false,
     secondPartCompleted:false,
     showPeerList:false,
-    startRenderingNickName:false
+    startRenderingNickName:false,
+    showSpinner:false
+
 
     };
   }  
   componentDidMount(){
-
+ 
 
 
   }
+ 
+
   renderAccessDesktopButton = ()=>{
 if(this.state.showAccessDesktopButton){
     return(
         <Link route='desktop' >
 
-<div className = "accessDesktopButton">
+<div onClick={()=>this.setState({showSpinner:true,showAccessDesktopButton:false})} className = "accessDesktopButton">
     <span className="accessDesktopButtonText">Access Desktop</span>
 </div>
 </Link >
 
 
 
+    )
+}else if(this.state.showSpinner){
+
+    return(
+        <div className = "accessDesktopButton">
+       <HashLoader
+          css={"position:absolute;top:20%;left:30%;"}
+          sizeUnit={"px"}
+          size={80}
+          color={'#7d12ff'}
+        />
+</div>
     )
 }
 
@@ -63,18 +80,18 @@ return(
 <br/>
 <div style={{display:"flex"}}>
 <span>#12877 Last Peony[192.168.1.2] </span>
-<span style={{marginLeft:"5px"}} class="flag-icon flag-icon-tr"></span>
+<span style={{marginLeft:"5px"}} className="flag-icon flag-icon-tr"></span>
 <span  style={{marginLeft:"5px"}} className="onlineCircle"></span>
 </div>
 <div style={{display:"flex"}}>
 <span>#17764 Night Call[72.229.28.1] </span>
-<span style={{marginLeft:"5px"}} class="flag-icon flag-icon-us"></span>
+<span style={{marginLeft:"5px"}} className="flag-icon flag-icon-us"></span>
 <span  style={{marginLeft:"5px"}} className="offlineCircle"></span>
 
 </div>
 <div style={{display:"flex"}}>
 <span>#13973 Lost Dreams[178.216.33.4] </span>
-<span style={{marginLeft:"5px"}} class="flag-icon flag-icon-se"></span>
+<span style={{marginLeft:"5px"}} className="flag-icon flag-icon-se"></span>
 <span  style={{marginLeft:"5px"}} className="offlineCircle"></span>
 </div>
 
@@ -337,7 +354,7 @@ return(
 
 <div className={this.consoleWindowClass()}>
    <div className="consoleWindowHeader">
-   <strong>Command Line</strong>
+   <strong>Command Prompt</strong>
     <span onClick={()=> this.props.closeClicked()}>×</span>
    </div>
    <div className="consoleWindowContent">

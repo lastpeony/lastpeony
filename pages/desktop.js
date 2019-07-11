@@ -11,7 +11,8 @@ export default class Desktop extends Component{
 
   constructor(props) {
     super(props);
- 
+    this.galleryImages =["https://i.lensdump.com/i/WcWwrZ.png"]
+
 
 
     this.state = { 
@@ -34,7 +35,6 @@ render(){
     
     <PageTransition timeout={800} classNames="page-transition">
 <DesktopComponent/>
- 
   </PageTransition>
 
   )

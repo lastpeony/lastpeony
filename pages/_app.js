@@ -6,6 +6,9 @@ import '../styles/ConsoleWindow.css'; // import css
 
 import '../styles/ChatBotWindow.css';
 import '../styles/ContactWindow.css';
+import '../styles/WorkWindow.css';
+import '../styles/image-gallery.css'
+
 import '../styles/Typist.css'
 import '../styles/ConnectionTimerWindow.css'; // import css
 import '../styles/ConnectionTimerWindow.css'; // import css

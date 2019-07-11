@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "cross-env NODE_ENV=production node server.js"
+    "start": "next start"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -21,9 +21,11 @@
     "react-device-detect": "^1.6.2",
     "react-dom": "^16.8.6",
     "react-draggable": "^3.3.0",
+    "react-image-gallery": "^0.8.18",
+    "react-spinners": "^0.5.8",
     "react-typist": "^2.0.5",
     "socket.io": "^2.2.0",
     "url-loader": "^2.0.0",
-    "vec2": "^1.6.0"
+    "webpack": "^4.35.3"
   }
 }

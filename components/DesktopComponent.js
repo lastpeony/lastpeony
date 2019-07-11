@@ -4,6 +4,9 @@ import Clock from '../components/Clock'
 import ConnectionTimerWindow from '../components/ConnectionTimerWindow'
 import ChatBotWindow from '../components/ChatBotWindow'
 import ContactWindow from '../components/ContactWindow'
+import WorkWindow from '../components/WorkWindow'
+import ImageGallery from 'react-image-gallery';
+
 import HamsterSpaceWindow from '../components/HamsterSpaceWindow'
 import { PageTransition } from 'next-page-transitions'
 import {isMobile} from 'react-device-detect';
@@ -17,6 +20,7 @@ export default class DesktopComponent extends Component{
  
 
 
+
     this.state = { 
         openWindows:[],
         desktopReturnsBack:false,
@@ -27,6 +31,8 @@ export default class DesktopComponent extends Component{
         chatBotWindowMinimized:false,
         showContactWindow:false,
         contactWindowMinimized:false,
+        showWorkWindow:false,
+        workWindowMinimized:false,
       backGroundRunningApps:false,
     };
   }  
@@ -103,6 +109,20 @@ return(
     }
     
 }
+workWindowMinimizedClassSelector = ()=>{
+    this.state.openWindows.forEach(openWindow =>{
+        if(openWindow.isSelected == true && openWindow.windowName == "work"){
+            return 'windowHighZIndex'
+        }
+    })
+    
+    if(this.state.workWindowMinimized ==true){
+        return 'windowMinimized'
+    }else{
+        return ''
+    }
+    
+}
   timeUpdater = ()=>{
       setInterval(updateTime,)
 
@@ -122,6 +142,13 @@ if(this.state.showChatBotWindow){
         )
     }
 
+  }
+  renderWorkWindow = ()=>{
+      if(this.state.showWorkWindow){
+        return(
+            <WorkWindow  workWindowMinimizedClassSelector={this.workWindowMinimizedClassSelector} minimizeWorkWindow={this.minimizeWorkWindow} closeWorkWindow={this.closeWorkWindow}/>
+        )
+      }
   }
 
   chatBotWindowIconClicked = ()=>{
@@ -173,6 +200,31 @@ if(this.state.showChatBotWindow){
 
 
   }
+  workWindowIconClicked = ()=>{
+    var alreadyOpen = false;
+
+    this.state.openWindows.forEach(window=>{
+        window.isSelected=false;
+        if(window.windowName == "work"){
+            alreadyOpen = true;
+            window.isSelected=true;
+        }
+    })
+    
+   
+      if(!alreadyOpen){
+        var windowObject = {
+            windowName:"work",
+            isSelected:true
+        }    
+        this.setState({showWorkWindow:true,openWindows:[...this.state.openWindows, windowObject]})
+      }else{
+       return;
+
+      }
+
+
+  }
   hamsterSpaceIconClicked = ()=>{
       if(isMobile){
           alert("For now you need a computer to play this game! :/")
@@ -191,7 +243,6 @@ if(this.state.showChatBotWindow){
       this.setState({showChatBotWindow:false,openWindows: this.state.openWindows.filter(openWindow=> { 
         return openWindow.windowName !== "chatbot" 
     })},()=>{
-        console.log(this.state.openWindows)
 
         if(this.state.openWindows.length >0){
             var openWindows = this.state.openWindows
@@ -210,7 +261,23 @@ if(this.state.showChatBotWindow){
     this.setState({showContactWindow:false,openWindows: this.state.openWindows.filter(openWindow=> { 
       return openWindow.windowName !== "contact" 
   })},()=>{
-    console.log(this.state.openWindows)
+
+    if(this.state.openWindows.length >0){
+        var openWindows = this.state.openWindows
+    
+        openWindows[0].isSelected = true;
+        this.setState({openWindows:openWindows})
+    }
+   
+})
+
+}
+closeWorkWindow = ()=>{
+
+   
+    this.setState({showWorkWindow:false,openWindows: this.state.openWindows.filter(openWindow=> { 
+      return openWindow.windowName !== "work" 
+  })},()=>{
 
     if(this.state.openWindows.length >0){
         var openWindows = this.state.openWindows
@@ -233,6 +300,11 @@ this.setState({chatBotWindowMinimized:true})
     
     
       }
+      minimizeWorkWindow = ()=>{
+        this.setState({workWindowMinimized:true})
+        
+        
+          }
 chatBotMinimizedClicked = ()=>{
     if(this.state.chatBotWindowMinimized ==true){
         this.setState({chatBotWindowMinimized:false})
@@ -242,6 +314,12 @@ chatBotMinimizedClicked = ()=>{
 contactMinimizedClicked = ()=>{
     if(this.state.contactWindowMinimized ==true){
         this.setState({contactWindowMinimized:false})
+    }
+
+}
+workMinimizedClicked = ()=>{
+    if(this.state.workWindowMinimized ==true){
+        this.setState({workWindowMinimized:false})
     }
 
 }
@@ -286,6 +364,27 @@ return(
                 
                 </div>  
             )
+        }else if(openWindow.windowName=="work"&& openWindow.isSelected){
+return(
+    <div key={"workSelected"} onClick={()=> this.workMinimizedClicked()} className="windowSelected">
+                <img width="25px" src="../static/work.png"></img>
+                       <span>Projects</span>
+                
+                </div>
+)
+
+        }else if(openWindow.windowName =="work"&& openWindow.isSelected==false){
+
+    return(
+        <div key={"workNotSelected"} onClick={()=> this.workMinimizedClicked()} className="windowNotSelected">
+        <img width="25px" src="../static/work.png"></img>
+               <span>Projects</span>
+        
+        </div>  
+    )
+
+
+            
         }
         
         
@@ -317,7 +416,10 @@ return(
   renderDesktopBlack = ()=>{
       if(this.state.desktopGoesBlack){
           return(
-              <div className="desktopBlack"></div>
+              <div className="desktopBlack">
+              <img  className="peonyImage" src="../static/peony.png"></img>
+              
+              </div>
           )
       }else if(this.state.desktopReturnsBack){
 return(
@@ -345,7 +447,7 @@ return(
   shutDownClicked = ()=>{
 
     this.setState({desktopGoesBlack:true,showShutDownMenu:false})
-    setTimeout(this.desktopBgChanger,6000)
+    setTimeout(this.desktopBgChanger,13000)
 
   }
   renderHamsterSpaceWindow = ()=>{
@@ -359,9 +461,13 @@ return(
 render(){
   return(
     <div className="desktopContainer" >
+   
+
     {this.renderDesktopBlack()}
     {this.renderChatBotWindow()}
     {this.renderContactWindow()}
+    {this.renderWorkWindow()}
+
     {this.renderHamsterSpaceWindow()}
     <div className="activateWindowsTextContainer">
     <span style={{fontSize:"25px"}}>Activate Windows</span>
@@ -379,9 +485,9 @@ render(){
 <img onClick={()=> this.contactWindowIconClicked()} width="75px" style={{display:"block"}} src="../static/contact.png"/>
 <span>Contact</span>
 </div>
-<div className="iconTextContainer">
+<div onClick={()=> this.workWindowIconClicked()} className="iconTextContainer">
 <img width="75px" style={{display:"block"}} src="../static/work.png"/>
-<span>Work</span>
+<span>Projects</span>
 </div>
 <div className="iconTextContainer">
 <img width="75px" style={{display:"block"}} src="../static/resume.png"/>

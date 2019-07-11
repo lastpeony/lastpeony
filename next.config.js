@@ -1,9 +1,8 @@
-// next.config.js
 const withCSS = require('@zeit/next-css')
 module.exports = withCSS({
 
     webpack: config => {
-      
+
 
 
 
@@ -17,7 +16,7 @@ module.exports = withCSS({
           }
         }
       })
- 
+
       return config
     }
   })

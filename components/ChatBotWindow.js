@@ -11,7 +11,7 @@ export default class ChatBotWindow extends Component{
     this.initialResponse = "Hi ! I am Last Peony  - the digital version of Software Engineer Yunus Emre Güney! Thanks for connecting to my computer and stopping by for the chat.I haven't seen a human for a long time... Go  ahead and ask me something!"
     this.questionList= ["Who are you?","What are your skills?","What do you like to code in ?","Can i see your projects/work?","Which CS topics are you interested in ?","What are you up-to nowadays?","Can you hack my computer ?"]
     this.questionAnswers = [{
-      answers:["My name is Yunus.I am a 21 years old Computer Science graduate located in Istanbul working as a software engineer.I am a full-stack web,mobile app programmer,online game developer.","I am passionate about creating apps which connects people,developing products which solves daily problems,creating virtual worlds where everyone can have fun!","I am pretty much platform agnostic.I can develope for web,mobile(IOS-Android) and desktop.","Personality wise I'm a liberal who is obsessive about freedom.When it comes to projects i am very serious,i cant sleep with an existed bug!(:P).I have never ending curiosity about computers and space! I believe in a cyberpunk future.","So best way to guess future is to create it!"]
+      answers:["My name is Yunus.I am  21 years old Computer Science graduate located in Istanbul working as a software engineer.I am a full-stack web,mobile app programmer,online game developer.","I am passionate about creating apps which connects people,developing products which solves daily problems,creating virtual worlds where everyone can have fun!","I am pretty much platform agnostic.I can develope for web,mobile(IOS-Android) and desktop.","Personality wise I'm a liberal who is obsessive about freedom.When it comes to projects i am very serious,i cant sleep with an existed bug!(:P).I have never ending curiosity about computers and space! I believe in a cyberpunk future.","So best way to guess future is to create it!"]
 
 
     },{
@@ -22,7 +22,7 @@ export default class ChatBotWindow extends Component{
     answers:["For front end i have little experience with Vue and Angular.My expertise and favourite is React.","For back-end i have experience with PHP(Laravel) and Java(Spring) but nowadays my go to is Node.js technologies like Express.js and Next.js.If a simple API is needed sometimes i prefer to use Python(Flask) on server side.If a real time feature is needed i use WebSockets.I have lots of experience with Socket.io","For database i use MongoDB,Firebase or MySQL depending on project.","I can develope native java applications for android.But nowadays i prefer React-Native since its more than enough for most of the projects and maintaining single code base for Android-IOS is easier.","When it comes to game development i prefer to work with low level game engines such as LibGDX and Phaser.","For android and IOS i use libGDX with Java, for web games i use Phaser with javascript.","For desktop programming i have experience with C++,Java,C# and Python.Nowadays most of the time i use Java and Python."]
   },
 {
-  answers:["Of course! Click on Work icon which is located on desktop to see projects i have developed using my skills."]
+  answers:["Of course! Click on Projects icon which is located on desktop to check projects i have developed using my skills."]
 },
 {
   answers:["I am interested in Distributed Systems,Computer Vision,Computer Networks and Cyber Security.","I am looking forward to learn more about AI and ML in future."]
@@ -105,7 +105,7 @@ renderChatHistory = ()=>{
       if(message.isBot){
         return(
 
-          <div style={{display:"flex",fontFamily:"Courier",marginTop:"10px"}}>
+          <div key={message.message+Math.random()} style={{display:"flex",fontFamily:"Courier",marginTop:"10px"}}>
           <span>
           <span style={{color:"yellow",fontSize:"18px"}}>{userName}</span>
           <span style={{color:"lightblue",fontSize:"17px",marginLeft:"20px"}}>{message.message}</span>
@@ -117,7 +117,7 @@ renderChatHistory = ()=>{
         )
       }else{
         return(
-          <div style={{display:"flex",fontFamily:"Courier",marginTop:"10px"}}>
+          <div key={message.message+Math.random()}  style={{display:"flex",fontFamily:"Courier",marginTop:"10px"}}>
           <span>
           <span style={{color:"white",fontSize:"18px"}}>{userName}</span>
           <span style={{color:"lightblue",fontSize:"17px",marginLeft:"20px"}}>{message.message}</span>
@@ -159,7 +159,6 @@ renderQuestions = ()=>{
     return(
       this.questionList.slice(0,3).map((question,index) =>{
         if(index==3){
-          console.log("index is 3")
           return true;
         }else{
 return(
@@ -210,7 +209,6 @@ return(
 
 
     this.questionList.slice(3,this.questionList.length).map((question,index)=>{
-      console.log(index)
     return(
       <div onClick={()=> this.questionClicked(question)} className="question">
     <span>{question}</span>
@@ -257,7 +255,6 @@ answerDelay = (delay)=>{
 var questionIndexToReply = this.questionList.indexOf(this.state.selectedQuestion)
 for (var i=0; i<this.questionAnswers[questionIndexToReply].answers.length; i++) {
     var answer = this.questionAnswers[questionIndexToReply].answers[i];
-    console.log(answer)
     this.updateHistory(answer,"Last Peony",true)
     this.setState({showTypingMessage:true})
 var delay =  Math.floor(Math.random()*(6000-3000+1)+3000);
