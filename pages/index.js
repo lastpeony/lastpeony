@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import ConsoleWindow from '../components/ConsoleWindow'
 import Virus from '../components/Virus'
-import RealName from '../components/RealName'
+const RealName = dynamic(import('../components/RealName'), {ssr: false})
+const ConsoleWindow = dynamic(import('../components/ConsoleWindow'), {ssr: false})
+
 import NeverKnowText from '../components/NeverKnowText'
 import {Link} from '../routes'
 import {Router} from '../routes'
@@ -26,11 +27,13 @@ export default class Index extends Component{
   }  
 
   componentDidMount(){
-
-    this.setState({show:true})
  
+    this.setState({show:true})
 
 
+
+  }
+  displayPage = ()=>{
 
   }
   renderVirusOrNot = ()=>{
