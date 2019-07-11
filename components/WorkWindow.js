@@ -509,15 +509,33 @@ return(
     this.setState({statusArray:statusArray,status:3})
 
   }
+  renderBackwardForward = ()=>{
+if(isMobile){
+  return(
+    <div>
+    <img  onClick={()=>this.backwardClicked()} width="15px" src="../static/backward.png"></img>
+    <img  onClick={()=>this.forwardClicked()} style={{marginLeft:"5px"}} width="15px" src="../static/forward.png"></img>
+</div>
+  )
+}else{
+
+return(
+  <div>
+  <img  onClick={()=>this.backwardClicked()} width="25px" src="../static/backward.png"></img>
+  <img  onClick={()=>this.forwardClicked()} style={{marginLeft:"10px"}} width="25px" src="../static/forward.png"></img>
+  </div>
+)
+}
+
+
+  }
 
   renderWorkWindowAdressBar = ()=>{
     if(this.state.status == 0){
       return(
         <div className="workWindowAdressBarContainer">
         <div className="backForwardContainer">
-        <img  onClick={()=>this.backwardClicked()} width="25px" src="../static/backward.png"></img>
-        <img  onClick={()=>this.forwardClicked()} style={{marginLeft:"10px"}} width="25px" src="../static/forward.png"></img>
-        
+      {this.renderBackwardForward()}
         </div>
         <div className={this.adressBarCssSelector()}>
         <span>C:\\Users\\LastPeony\\Desktop\\Projects</span>
@@ -528,9 +546,8 @@ return(
       return(
         <div className="workWindowAdressBarContainer">
         <div className="backForwardContainer">
-        <img  onClick={()=>this.backwardClicked()}  width="25px" src="../static/backward.png"></img>
-        <img onClick={()=>this.forwardClicked()} style={{marginLeft:"10px"}} width="25px" src="../static/forward.png"></img>
-        
+        {this.renderBackwardForward()}
+
         </div>
         <div className={this.adressBarCssSelector()}>
         <span>C:\\Users\\LastPeony\\Desktop\\Projects\\Web</span>
@@ -541,9 +558,8 @@ return(
       return(
         <div className="workWindowAdressBarContainer">
         <div className="backForwardContainer">
-        <img   onClick={()=>this.backwardClicked()} width="25px" src="../static/backward.png"></img>
-        <img onClick={()=>this.forwardClicked()} style={{marginLeft:"10px"}} width="25px" src="../static/forward.png"></img>
-        
+        {this.renderBackwardForward()}
+
         </div>
         <div className={this.adressBarCssSelector()}>
         <span>C:\\Users\\LastPeony\\Desktop\\Projects\\Mobile</span>
@@ -554,9 +570,8 @@ return(
       return(
         <div className="workWindowAdressBarContainer">
         <div className="backForwardContainer">
-        <img onClick={()=>this.backwardClicked()} width="25px" src="../static/backward.png"></img>
-        <img onClick={()=>this.forwardClicked()} style={{marginLeft:"10px"}} width="25px" src="../static/forward.png"></img>
-        
+        {this.renderBackwardForward()}
+
         </div>
         <div className={this.adressBarCssSelector()}>
         <span>C:\\Users\\LastPeony\\Desktop\\Projects\\DeskP.</span>
