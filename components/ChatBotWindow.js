@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/ChatBotWindow.css'; // import css
 import Typist from 'react-typist';
+import {isMobile} from 'react-device-detect';
 
 import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same time
 
@@ -294,45 +295,86 @@ closeWindow = ()=>{
 
 //chatBotWindowContainer
   render(){
-  
-        return(
-          <div className={this.props.chatBotWindowMinimizedClassSelector()}>
-          <Draggable>
+  if(isMobile){
+    return(
+      return(
+        <div className={this.props.chatBotWindowMinimizedClassSelector()}>
 
-            <div className="chatBotWindowContainer">
-       <div className="chatBotWindowToolBar">
-       <div style={{display:"flex",alignItems:"center",paddingBottom:"5px",paddingTop:"5px"}}>
-       <img width="35px" src="../static/chatbot.png"></img>
-       <span style={{fontFamily:"Courier",fontSize:"20px",marginLeft:"5px"}}>ChatBot</span>
+          <div className="chatBotWindowContainer">
+     <div className="chatBotWindowToolBar">
+     <div style={{display:"flex",alignItems:"center",paddingBottom:"5px",paddingTop:"5px"}}>
+     <img width="35px" src="../static/chatbot.png"></img>
+     <span style={{fontFamily:"Courier",fontSize:"20px",marginLeft:"5px"}}>ChatBot</span>
 
-       </div>
-      <div className="closeMinimize">
+     </div>
+    <div className="closeMinimize">
 <span onClick={()=> this.props.minimizeChatBotWindow()} className="minimize">-</span>
 <span onClick={()=> this.props.closeChatBotWindow()} className="closeWindow">×</span>
-      </div>
-       </div>
-       <div className="chatBotWindowContent">
-        {this.renderChatHistory()}
-         <div ref={el => { this.el = el; }} />
+    </div>
+     </div>
+     <div className="chatBotWindowContent">
+      {this.renderChatHistory()}
+       <div ref={el => { this.el = el; }} />
 
-        {this.renderIsTypingMessage()}
+      {this.renderIsTypingMessage()}
 
 
 
-       </div>
-       <div className="questionContainer">
-       {this.renderUserTyping()}
-       {this.renderQuestions()}
-      {this.renderShowMoreQuestions()}
+     </div>
+     <div className="questionContainer">
+     {this.renderUserTyping()}
+     {this.renderQuestions()}
+    {this.renderShowMoreQuestions()}
 
-       </div>
-       {this.renderMoreQuestionsContainer()}
-      
-            </div>
-            </Draggable>
+     </div>
+     {this.renderMoreQuestionsContainer()}
+    
+          </div>
 </div>
-            
-            )
+          
+          )
+    )
+  }else{
+    return(
+      <div className={this.props.chatBotWindowMinimizedClassSelector()}>
+      <Draggable>
+
+        <div className="chatBotWindowContainer">
+   <div className="chatBotWindowToolBar">
+   <div style={{display:"flex",alignItems:"center",paddingBottom:"5px",paddingTop:"5px"}}>
+   <img width="35px" src="../static/chatbot.png"></img>
+   <span style={{fontFamily:"Courier",fontSize:"20px",marginLeft:"5px"}}>ChatBot</span>
+
+   </div>
+  <div className="closeMinimize">
+<span onClick={()=> this.props.minimizeChatBotWindow()} className="minimize">-</span>
+<span onClick={()=> this.props.closeChatBotWindow()} className="closeWindow">×</span>
+  </div>
+   </div>
+   <div className="chatBotWindowContent">
+    {this.renderChatHistory()}
+     <div ref={el => { this.el = el; }} />
+
+    {this.renderIsTypingMessage()}
+
+
+
+   </div>
+   <div className="questionContainer">
+   {this.renderUserTyping()}
+   {this.renderQuestions()}
+  {this.renderShowMoreQuestions()}
+
+   </div>
+   {this.renderMoreQuestionsContainer()}
+  
+        </div>
+        </Draggable>
+</div>
+        
+        )
+  }
+        
     
 
     
