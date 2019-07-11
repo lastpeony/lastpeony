@@ -296,7 +296,7 @@ closeWindow = ()=>{
 //chatBotWindowContainer
   render(){
   if(isMobile){
-    return(
+    
       return(
         <div className={this.props.chatBotWindowMinimizedClassSelector()}>
 
@@ -333,7 +333,7 @@ closeWindow = ()=>{
 </div>
           
           )
-    )
+    
   }else{
     return(
       <div className={this.props.chatBotWindowMinimizedClassSelector()}>
