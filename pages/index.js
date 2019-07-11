@@ -25,17 +25,20 @@ export default class Index extends Component{
     renderNeverKnowText:false,
     renderStrikedName:false,
     show:false,
+    showPageContent:false
     };
   }  
 
   componentDidMount(){
  
     this.setState({show:true})
+    setTimeout(this.displayPage,1500)
 
 
 
   }
   displayPage = ()=>{
+this.setState({showPageContent:true})
 
   }
   renderVirusOrNot = ()=>{
@@ -76,11 +79,10 @@ return(
   makeStrikedName = ()=>{
     this.setState({renderStrikedName:true})
   }
-render(){
-  if(this.state.show == true){
-    return(
-
-      <div style={{backgroundColor:"#010203",height:"100%"}}>
+  renderPageContent = ()=>{
+    if(this.state.showPageContent == true)
+return(
+<div className="indexEnterAnimation">
       {this.renderRealName()}
       <ConsoleWindow makeStrikedName = {this.makeStrikedName} closeClicked={this.closeClicked} renderVirus={this.renderVirus} />
       {this.renderVirusOrNot()}
@@ -91,6 +93,18 @@ render(){
       </div>
       </Link>
   
+</div>
+
+
+)
+
+  }
+render(){
+  if(this.state.show == true){
+    return(
+
+      <div style={{backgroundColor:"#010203",height:"100%"}}>
+  {this.renderPageContent()}
     </div>
   
   

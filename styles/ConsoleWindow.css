@@ -42,6 +42,28 @@ cursor: pointer;
         display: inline-block;
       
 }
+.indexEnterAnimation{
+
+
+    -webkit-animation: index-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: index-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes index-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes index-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 .accessDesktopButton:hover{
     background-color: rgb(253,240,4)
 }
