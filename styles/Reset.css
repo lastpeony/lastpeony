@@ -75,9 +75,9 @@ html, body {
     border-spacing: 0;
     }
     @media screen and (orientation: landscape) {
-        body {
+        html {
             height: 100vw;
-            transform: rotate(90deg);
+            transform: rotate(-90deg);
             line-height: 1;
 
         }
