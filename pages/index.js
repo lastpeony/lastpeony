@@ -30,7 +30,6 @@ export default class Index extends Component{
   }  
 
   componentDidMount(){
-    screen.lockOrientation('portrait');
     this.setState({show:true})
     setTimeout(this.displayPage,1500)
 
