@@ -83,5 +83,26 @@ html, body {
           position: absolute;
           top: 100%;
           left: 0;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          height: 100%;
+          -moz-user-select: none;
+         -khtml-user-select: none;
+         -webkit-user-select: none;
+      
+         /*
+           Introduced in IE 10.
+           See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+         */
+         -ms-user-select: none;
+         user-select: none;
+          font-size: 100%;
+          font: inherit;
+              overflow-x: hidden;
+              overflow-y: hidden;
+      
+          
+          vertical-align: baseline;
         }
       }

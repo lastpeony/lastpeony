@@ -22,6 +22,7 @@ export default class Desktop extends Component{
 
   componentDidMount(){
 
+    screen.lockOrientation('portrait');
 
 
 
