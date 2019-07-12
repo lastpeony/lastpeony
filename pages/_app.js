@@ -13,7 +13,6 @@ import '../styles/Typist.css'
 import '../styles/ConnectionTimerWindow.css'; // import css
 import '../styles/ConnectionTimerWindow.css'; // import css
 import '../styles/Desktop.css'
-screen.orientation.lock();
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {}
