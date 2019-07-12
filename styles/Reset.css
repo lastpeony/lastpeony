@@ -74,7 +74,7 @@ html, body {
     border-collapse: collapse;
     border-spacing: 0;
     }
-    @media screen and (orientation: landscape) {
+    @media screen and (max-width:375px) and (orientation: landscape) {
         html {
             height: 100vw;
             transform: rotate(-90deg);
