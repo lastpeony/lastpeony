@@ -21,6 +21,26 @@
     cursor: pointer;
     
 }
+.chatBotIcon{
+    width: 75px;
+}
+.contactIcon{
+    width: 75px;
+
+}
+.workIcon{
+    width: 75px;
+
+}
+.resumeIcon{
+    width: 75px;
+
+}
+.hamsterIcon{
+    width: 75px;
+
+}
+
 .hamsterIconContainer{
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
@@ -279,5 +299,30 @@ margin-left:15px;
     font-family: "Courier"
   
     
+
+}
+
+@media(max-height:600px){
+    .chatBotIcon{
+        width: 55px;
+    }
+    .contactIcon{
+        width: 55px;
+    
+    }
+    .workIcon{
+        width: 55px;
+    
+    }
+    .resumeIcon{
+        width: 55px;
+    
+    }
+    .hamsterIcon{
+        width: 55px;
+    
+    }
+
+
 
 }

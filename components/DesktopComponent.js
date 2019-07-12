@@ -478,24 +478,24 @@ render(){
     {this.renderShutDownMenu()}
     <div className="desktopIcons">
     <div className="iconTextContainer">
-<img onClick={()=> this.chatBotWindowIconClicked()} width="75px" style={{display:"block"}} src="../static/chatbot.png"/>
+<img onClick={()=> this.chatBotWindowIconClicked()} className="chatBotIcon" src="../static/chatbot.png"/>
 <span>ChatBot</span>
 </div>
 <div className="iconTextContainer">
-<img onClick={()=> this.contactWindowIconClicked()} width="75px" style={{display:"block"}} src="../static/contact.png"/>
+<img onClick={()=> this.contactWindowIconClicked()} className="contactIcon"  src="../static/contact.png"/>
 <span>Contact</span>
 </div>
 <div onClick={()=> this.workWindowIconClicked()} className="iconTextContainer">
-<img width="75px" style={{display:"block"}} src="../static/work.png"/>
+<img className="workIcon"   src="../static/work.png"/>
 <span>Projects</span>
 </div>
 <div className="iconTextContainer">
-<img width="75px" style={{display:"block"}} src="../static/resume.png"/>
+<img className="resumeIcon" src="../static/resume.png"/>
 <span>Resume</span>
 </div>
     </div>
     <div onClick={()=> this.hamsterSpaceIconClicked()} className="hamsterIconContainer">
-<img width="75px" style={{display:"block"}} src="../static/hamsterspace.png"/>
+<img className="hamsterIcon" src="../static/hamsterspace.png"/>
 <span style={{  marginTop:"5px",
     fontSize:"18px",
     color:"white",
