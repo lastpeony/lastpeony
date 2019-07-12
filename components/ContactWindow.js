@@ -56,7 +56,7 @@ export default class ContactWindow extends Component{
         
          
          <br/>
-         <span>#################################</span>
+         <span style={{wordWrap:"break-word"}}>#################################</span>
          <br/>
          <br/>
          <a style={{color:"#0f0"}} target="_blank" href="mailto:yguney@sabanciuniv.edu">yguney@sabanciuniv.edu</a>
