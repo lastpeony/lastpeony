@@ -74,35 +74,11 @@ html, body {
     border-collapse: collapse;
     border-spacing: 0;
     }
-    @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-        html {
-          transform: rotate(-90deg);
-          transform-origin: left top;
-          width: 100vh;
-          overflow-x: hidden;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          margin: 0;
-          padding: 0;
-          border: 0;
-          height: 100%;
-          -moz-user-select: none;
-         -khtml-user-select: none;
-         -webkit-user-select: none;
-      
-         /*
-           Introduced in IE 10.
-           See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-         */
-         -ms-user-select: none;
-         user-select: none;
-          font-size: 100%;
-          font: inherit;
-              overflow-x: hidden;
-              overflow-y: hidden;
-      
-          
-          vertical-align: baseline;
+    @media screen and (orientation: landscape) {
+        body {
+            height: 100vw;
+            transform: rotate(90deg);
+            line-height: 1;
+
         }
       }
