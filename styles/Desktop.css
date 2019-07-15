@@ -347,6 +347,15 @@ margin-left:15px;
     
     }
 
-
+    .desktopIcons .iconTextContainer{
+        display:flex;
+        flex-direction: column;
+        max-width: 75px;
+        margin-bottom: 25px;
+        align-items: center;
+     
+        
+    
+    }
 
 }
