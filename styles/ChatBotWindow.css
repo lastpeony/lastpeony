@@ -204,9 +204,9 @@ justify-content: space-evenly;
     flex-direction: column;
     justify-content: space-evenly;
         position: absolute;
-        bottom: 10;
+        bottom: 20px;
         left: 5%;
-        font-size: 12px;
+        font-size: 14px;
         color:white;
         font-family: "Courier";
     }
