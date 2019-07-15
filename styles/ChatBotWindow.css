@@ -204,7 +204,7 @@ justify-content: space-evenly;
     flex-direction: column;
     justify-content: space-evenly;
         position: absolute;
-        bottom: 0;
+        bottom: 10;
         left: 5%;
         font-size: 12px;
         color:white;
@@ -213,7 +213,7 @@ justify-content: space-evenly;
     .chatBotWindowContainer{
         position: absolute;
         z-index: 5;
-        top:5px;
+        top:2px;
         left:0;
         right:0;
         bottom:0;
