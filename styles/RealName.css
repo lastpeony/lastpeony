@@ -46,3 +46,19 @@
 
 
  }
+ @media (max-width:415px)  {
+  .realNameContainer{
+    text-align: center;
+    font-size:50px;
+  
+  }
+  
+  
+  
+   }
+@media (max-height:600px){
+  .realNameContainer{
+    font-size:30px;
+  
+  }
+}
