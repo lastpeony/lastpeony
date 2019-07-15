@@ -326,3 +326,27 @@ margin-left:15px;
 
 
 }
+@media(max-height:550px){
+    .chatBotIcon{
+        width: 45px;
+    }
+    .contactIcon{
+        width: 45px;
+    
+    }
+    .workIcon{
+        width: 45px;
+    
+    }
+    .resumeIcon{
+        width: 45px;
+    
+    }
+    .hamsterIcon{
+        width: 45px;
+    
+    }
+
+
+
+}
