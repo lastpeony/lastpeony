@@ -310,7 +310,7 @@ text-align: center;
 
 }
 
-@media (max-width:300px){
+@media (max-height:600px){
     .workWindowToolBar{
         display: flex;
         
