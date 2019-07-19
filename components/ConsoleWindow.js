@@ -25,13 +25,14 @@ export default class ConsoleWindow extends Component{
     secondPartCompleted:false,
     showPeerList:false,
     startRenderingNickName:false,
-    showSpinner:false
+    showSpinner:false,
+    showComponent:false
 
 
     };
   }  
   componentDidMount(){
- 
+    this.setState({showComponent:true})
 
 
   }
@@ -346,30 +347,39 @@ if(this.state.startRenderingNickName){
 
   }
   render(){
-return(
-    <div style={{display:"flex",flexDirection:"column",alignItems:"center"}}>
-    {this.renderNickName()}
-    {this.renderAccessDesktopButton()}
-    <Draggable>
+      if(this.state.showComponent == true){
 
-<div className={this.consoleWindowClass()}>
-   <div className="consoleWindowHeader">
-   <strong>Command Prompt</strong>
-    <span onClick={()=> this.props.closeClicked()}>×</span>
-   </div>
-   <div className="consoleWindowContent">
-    {this.renderConsoleParts()}
-  
+        return(
+            <div style={{display:"flex",flexDirection:"column",alignItems:"center"}}>
+            {this.renderNickName()}
+            {this.renderAccessDesktopButton()}
+            <Draggable>
+        
+        <div className={this.consoleWindowClass()}>
+           <div className="consoleWindowHeader">
+           <strong>Command Prompt</strong>
+            <span onClick={()=> this.props.closeClicked()}>×</span>
+           </div>
+           <div className="consoleWindowContent">
+            {this.renderConsoleParts()}
+          
+        
+           
+           </div>
+        
+          
+          </div>
+          </Draggable>
+        </div>
+        
+        )
 
-   
-   </div>
 
-  
-  </div>
-  </Draggable>
-</div>
 
-)
+      }else{
+          return(null)
+      }
+
     
 
 
