@@ -106,7 +106,7 @@ return(
 
   }
 render(){
-  if(this.state.show == true && this.props.show == true){
+  if(this.state.show == true){
     return(
 
       <div style={{backgroundColor:"#010203",height:"100%"}}>
