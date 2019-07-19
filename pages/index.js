@@ -15,6 +15,12 @@ import {Router} from '../routes'
 
 export default class Index extends Component{
 
+  async getInitialProps({ Component, ctx }) {
+    const loadableData = await Component.getInitialProps(ctx)
+    return {
+      show: !!loadableData.data //will return true when the data arrives
+    }
+  }
   constructor(props) {
     super(props);
  
@@ -100,7 +106,7 @@ return(
 
   }
 render(){
-  if(this.state.show == true){
+  if(this.state.show == true && this.props.show == true){
     return(
 
       <div style={{backgroundColor:"#010203",height:"100%"}}>
