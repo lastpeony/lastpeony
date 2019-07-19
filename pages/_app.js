@@ -14,6 +14,8 @@ import '../styles/ConnectionTimerWindow.css'; // import css
 import '../styles/ConnectionTimerWindow.css'; // import css
 import '../styles/Desktop.css'
 class MyApp extends App {
+
+  
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {}
 

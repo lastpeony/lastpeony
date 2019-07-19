@@ -76,3 +76,33 @@
     animation-fill-mode: forwards; 
   }
 }
+
+@media(min-width:1920px){
+
+  .realNameContainer{
+    position: relative;
+  
+    font-size: 90px;
+    font-family: "yguney";
+    color:greenyellow;
+    font-weight: bold;
+  
+  
+  
+  }
+  .strike::after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background:black;
+    animation-name: strike;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
+  }
+
+}
