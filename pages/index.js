@@ -30,9 +30,9 @@ export default class Index extends Component{
   }  
 
   componentDidMount(){
-   // this.setState({show:true})
-    console.log("mounted")
-    setTimeout(this.displayPage,1500)
+    this.setState({show:true})
+    //console.log("mounted")
+    //setTimeout(this.displayPage,1500)
 
 
 
