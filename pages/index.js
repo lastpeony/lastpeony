@@ -37,8 +37,8 @@ export default class Index extends Component{
 
   componentDidMount(){
     this.setState({show:true})
-    //console.log("mounted")
-    //setTimeout(this.displayPage,1500)
+    console.log("mounted")
+    setTimeout(this.displayPage,2000)
 
 
 
@@ -86,7 +86,7 @@ return(
     this.setState({renderStrikedName:true})
   }
   renderPageContent = ()=>{
-    //if(this.state.showPageContent == true)
+    if(this.state.showPageContent == true)
 return(
 <div className="indexEnterAnimation">
       {this.renderRealName()}
