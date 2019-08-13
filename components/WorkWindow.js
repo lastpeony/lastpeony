@@ -180,7 +180,7 @@ images:[
  
 ],
   
-video:["../static/arthuntervideo.mp4"],
+video:["https://streamable.com/5jr03"],
 title:"The Art Hunter",
 date:"2018-2019 and beyond...",
 desc:"Considerably my greatest project, The Art Hunter is an online augmented reality/geocaching rpg game for IOS and Android(similar to pokemon go).Players are playing as heroes whom aim is to bring light back to their country.Each player use his mobile phone as detectors to find buried art-relics around Sabanci University campus.Collected art works drops lumos which are light particles.There are minigames,mysteries and  puzzles around map which are waiting to be solved by players.There are many different NPCs with quests.Each player can decorate their own gallery and visit other players gallerys,each players movement is rendered on map thus game is dynamic and real time.Meteor+Mongo+Express used as backend."
