@@ -29,7 +29,7 @@ export default class Virus extends Component{
         return(
 
             <div className="virusImage">
-            <img style={{maxWidth:"100%",
+            <img onLoad={()=> console.log("virus is loaded!")} style={{maxWidth:"100%",
 maxHeight:"100%"}}  src="../static/virus.png"></img>
             
             
