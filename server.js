@@ -334,7 +334,7 @@ io.sockets.on('connection', function(socket){
 	console.log("socket connected"); 
 	//Soketin unique(eşsiz) idsini yazdır.(server a bağlanan client socket idlerini yazdırır)
 	console.log(socket.id);
-
+	console.log(socket.request.connection._peername.address);
 	// Clientten gelecek disconnect mesajı için dinle.
 	socket.on('disconnect', onClientDisconnect); 
 
