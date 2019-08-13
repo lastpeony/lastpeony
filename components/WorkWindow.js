@@ -40,7 +40,7 @@ desc:"Sportsout is an online video learning platform for sports similar to udemy
   type:"web",
 headerImage:"",
 images:[],
-video:["../static/bellroyvideo.mp4"],
+video:["https://streamable.com/q6y98"],
 title:"Bellroy.com Replica",
 date:"2019 Winter",
 desc:"Bellroy.com has  one of the most liked e-commerce website design.I have decided to re-create this website to sharpen my front-end  skills.Fully CSS flexbox and grid used.I have also used next.js express and mysql for simple e commerce website backend.I also developed custom image cauresel for the website."
@@ -50,7 +50,7 @@ desc:"Bellroy.com has  one of the most liked e-commerce website design.I have de
   type:"web",
 headerImage:"",
 images:[],
-video:["../static/mytownvideo1.mp4"],
+video:["https://streamable.com/0i8pu"],
 title:"MyTown",
 date:"2018 Summer",
 desc:"What Yunus does when he is bored at summer in Sabanci dorms ? Of course he writes code.As a fan of old school online browser games, i have decided to make a troll one for myself.Mytown is an online browser town building game with crafting,cooking and farming features.Players could build different structures to obtain different resources.Entire backend is developed with meteor.js,database  was mongodb.Even though front end was pretty much trash I wrote so much solid backend-db code during this project and learned a ton of stuff."
@@ -194,7 +194,7 @@ images:[
  
 ],
   
-video:["../static/done.mp4"],
+video:["https://streamable.com/ruk21"],
 title:"Done App",
 date:"2018 Spring",
 desc:"Done is a native android app which sends its users daily missions and keeps progress of them.It has a simple forum where users can discuss missions.Design of the app is done by 2 of my group friends,entire client(java) and backend code is written by me in 2 weeks.Functionality wise done is firebase CRUD application with auth."
@@ -250,7 +250,7 @@ images:[
  
 ],
   
-video:["../static/distributed.mp4"],
+video:["https://streamable.com/7uxm6"],
 title:"Distributed Systems Algorithms",
 date:"2019 Spring",
 desc:"During my course distributed systems i have implemented 2 important algorithms alone with Python.1 st one is 'chord' which is base of p2p systems.2 nd one is 'Byzantine Fault Tolerence'.  "
@@ -264,7 +264,7 @@ images:[
  
 ],
   
-video:["../static/imdb.mp4"],
+video:["https://streamable.com/cdrxx"],
 title:"Web Scraping",
 date:"2019 Spring",
 desc:"Using nodes xray.js i scraped html data from web.During this project i  mined imdb movie gross and point data and ploted them  as graph with react.This was a very simple task but on the other hand i learned how to mine any data from web so it was a great achievement."
@@ -278,7 +278,7 @@ images:[
  
 ],
   
-video:["../static/quizgame.mp4"],
+video:["https://streamable.com/m3kmc"],
 title:"C# Online Quiz Game",
 date:"2018 Winter",
 desc:"I developed a simple online quiz game in C# to experiment with raw sockets.Both client and server is c#.Each round a player asks a question and other players answers.Player with highest point wins."
