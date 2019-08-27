@@ -158,20 +158,20 @@ date:"Under Development",
 desc:"I am working on an online mobile mini game platform.Users will play various 1v1 2v2 mini games against each other,video calls during games and beting will be possible for competitive environment.I have integrated android project and LibGDX.Using box2d as physics engine on both server and client side.Express backend with lots of socket connections involved..."
 
 },
-{
-  type:"mobile",
-headerImage:"",
-images:[
+//{
+//  type:"mobile",
+//headerImage:"",
+//images:[
  
  
-],
+//],
   
-video:[],
-title:"Trojan Hacker Panel",
-date:"2019...",
-desc:"I  develope administrator panels of my malwares as a mobile app since it feels  more portable and definitly cooler :) Usually i list information of infected devices and interact with them,sending commands or reading logs using this app.Developed with React-native"
+//video:[],
+//title:"Trojan Hacker Panel",
+//date:"2019...",
+//desc:"I  develope administrator panels of my malwares as a mobile app since it feels  more portable and definitly cooler :) Usually i list information of infected devices and interact with them,sending commands or reading logs using this app.Developed with React-native"
 
-},
+//},
 {
   type:"mobile",
 headerImage:"",
@@ -200,48 +200,48 @@ date:"2018 Spring",
 desc:"Done is a native android app which sends its users daily missions and keeps progress of them.It has a simple forum where users can discuss missions.Design of the app is done by 2 of my group friends,entire client(java) and backend code is written by me in 2 weeks.Functionality wise done is firebase CRUD application with auth."
 
 },
-{
-  type:"desktop",
-headerImage:"",
-images:[
+//{
+  //type:"desktop",
+//headerImage:"",
+//images:[
  
  
-],
+//],
   
-video:[],
-title:"Kudur Super Trojan",
-date:"2019 Summer",
-desc:"Kudur is a super trojan fully written in C++.It has features such as screenlogging,keylogging,remote message transfer,remotely activated ransomware feature, running any system command on victims computer, file transfer and more.Kudur is controled by attacker using trojan administrator tool from mobile phone.Kudur stays undetected by using a diffent infection methodology."
+//video:[],
+//title:"Kudur Super Trojan",
+//date:"2019 Summer",
+//desc:"Kudur is a super trojan fully written in C++.It has features such as screenlogging,keylogging,remote message transfer,remotely activated ransomware feature, running any system command on victims computer, file transfer and more.Kudur is controled by attacker using trojan administrator tool from mobile phone.Kudur stays undetected by using a diffent infection methodology."
 
-},
-{
-  type:"desktop",
-headerImage:"",
-images:[
+//},
+//{
+  //type:"desktop",
+//headerImage:"",
+//images:[
  
  
-],
+//],
   
-video:[],
-title:"PeoRAT",
-date:"2019 Spring",
-desc:"PeoRAT is a remote administration trojan written in Python.Its more of a remote administration tool rather than a trojan since its actually an earlier form of Kudur Super Trojan.Allows attacker to run commands on victims computer such as message transfer,shutting down remotely etc.Controlled by trojan administrator tool."
+//video:[],
+//title:"PeoRAT",
+//date:"2019 Spring",
+//desc:"PeoRAT is a remote administration trojan written in Python.Its more of a remote administration tool rather than a trojan since its actually an earlier form of Kudur Super Trojan.Allows attacker to run commands on victims computer such as message transfer,shutting down remotely etc.Controlled by trojan administrator tool."
 
-},
-{
-  type:"desktop",
-headerImage:"",
-images:[
+//},
+//{
+  //type:"desktop",
+//headerImage:"",
+//images:[
  
  
-],
+//],
   
-video:[],
-title:"CryMore",
-date:"2019 Spring",
-desc:"CryMore is a ransomware written in Python and C++(seperately).Crymore uses AES 128 bit encryption to encrypt all important files on victims computer and sends decryption key to attacker.CryMore demands BTC or some other task from victim.When task is completed,a decryptor antidote file is automaticly sent to the victim so they can get their files back."
+//video:[],
+//title:"CryMore",
+//date:"2019 Spring",
+//desc:"CryMore is a ransomware written in Python and C++(seperately).Crymore uses AES 128 bit encryption to encrypt all important files on victims computer and sends decryption key to attacker.CryMore demands BTC or some other task from victim.When task is completed,a decryptor antidote file is automaticly sent to the victim so they can get their files back."
 
-},
+//},
 {
   type:"desktop",
 headerImage:"",
